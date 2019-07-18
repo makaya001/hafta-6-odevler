@@ -1,0 +1,357 @@
+x=""" 
+    ---------
+    |       |                               
+    |       0
+    |
+    |
+    |
+    |
+  -----"""
+#bu grafigi bir degiskene atayip her printte
+#degiskeni formulle degistirecektim fakat ileride
+#isler degisti ve hepsini ayri yaptim
+
+soru='nasilsin'
+soru=list(soru)
+cevap ='-------'
+cevap=list(cevap)
+#kullanicinin bulmasini istedigim
+#kelimeyi belirledim ve bunu listeye
+#cevirdim kullanicidan alacagim cevabida
+#listeye cevirerek iki listeyi karsilastirmayi planladim
+print('Oyun icin 6 hakkiniz bulunmakta!')
+sayi='1234567890'
+karakter='!@#$%^&*()_+\|}{:"?><,./;\'[]'
+bosluk=' '
+
+#burda istemedigimiz karakterleri degiskn olarak
+#belirleyip her inputdan sonra denetleyerek
+#kullanicinin sadece harf girmesini sagladik
+sayac=5
+print(x)
+while True :
+
+    for i in cevap :
+        if '-' not in cevap :
+            print('Tebrikler butun harfleri buldunuz')
+            quit()
+
+#while dongusu kurdum ve while dongusunun akisini
+#saglamak ve bitirebilmek icin sayac kurdum
+    print('-' * len(soru))
+    deneme1=input('Lutfen bir tahminde bulunun :')
+    deneme1=deneme1.upper()
+#kullanicidan ilk inputu aldim ve bunun dogru olmasi olasigini
+#if bloklari ile belirledik ve for dongusude kullanicinin
+#cevabi bulabilmesi halinde devreye girip istedigim output u verip
+#donguyu kapatiyor
+
+    if sayac == 5:
+        if deneme1 in sayi:
+            print('Lutfen bir harf girin')
+            continue
+        if deneme1 in karakter :
+            print('Lutfen ozel karakter girmeyin')
+            continue
+        if deneme1 in bosluk :
+            print('Lutfen tahmini bos birakmayin')
+            continue
+        if len(deneme1) > 1:
+            print("Lutfen her defasinda sadece bir harf girin!")
+            continue
+        # burada if ile gelen inputun birden fazla karakter olmasi
+        # durumunda benim istedigim mesaji aldirdim
+        if deneme1=='N' :
+#burda gelen input listenin N karakteri
+#olursa cevapta bulunan - karakteri ile
+#degistirmesi icin bu metodu kullandim
+            cevap[0:1]=['N']
+            cevap[7:]=['N']
+            print(*cevap)
+        elif deneme1=='S' :
+            cevap[2:3]=['S']
+            cevap[5:6]=['S']
+            print(*cevap)
+        elif deneme1=='A' :
+            cevap[1:2]=['A']
+            print(*cevap)
+        elif deneme1=='I' :
+            cevap[3:4]=['I']
+            cevap[6:7]=['I']
+            print(*cevap)
+        elif deneme1=='L' :
+            cevap[4:5]=['L']
+            print(*cevap)
+
+        else :
+            print("""
+                     ---------                        
+                     |       |
+                     |       0
+                     |       |
+                     |
+                     |                                                         
+                     |
+                   -----""")
+            print('{} hakkiniz kaldi!'.format(sayac))
+
+            sayac-=1
+    if sayac==4 :
+        deneme2=input('Lutfen bir tahminde bulunun :')
+        deneme2=deneme2.upper()
+        if deneme2 in sayi:
+            print('Lutfen bir harf girin')
+            continue
+        if deneme2 in karakter :
+            print('Lutfen ozel karakter girmeyin')
+            continue
+        if deneme2 in bosluk :
+            print('Lutfen tahmini bos birakmayin')
+            continue
+        if len(deneme2) > 1:
+            print("Lutfen her defasinda sadece bir harf girin!")
+            continue
+        if deneme2=='N':
+            cevap[0:1] = ['N']
+            cevap[7:] = ['N']
+            print(*cevap)
+        elif deneme2=='S' :
+            cevap[2:3] = ['S']
+            cevap[5:6] = ['S']
+            print(*cevap)
+        elif deneme2=='A' :
+            cevap[1:2] = ['A']
+            print(*cevap)
+        elif deneme2=='I' :
+            cevap[3:4] = ['I']
+            cevap[6:7] = ['I']
+            print(*cevap)
+        elif deneme2=='L' :
+            cevap[4:5] = ['L']
+            print(*cevap)
+        else :
+            print("""
+                     ---------                        
+                     |       |
+                     |       0
+                     |      /|
+                     |
+                     |                                                         
+                     |
+                   -----""")
+            print('{} hakkiniz kaldi!'.format(sayac))
+
+            sayac -= 1
+    if sayac==3 :
+        deneme3=input('Lutfen bir tahminde bulunun :')
+        deneme3=deneme3.upper()
+        if deneme3 in sayi:
+            print('Lutfen bir harf girin')
+            continue
+        if deneme3 in karakter :
+            print('Lutfen ozel karakter girmeyin')
+            continue
+        if deneme3 in bosluk :
+            print('Lutfen tahmini bos birakmayin')
+            continue
+        if len(deneme3) > 1:
+            print("Lutfen her defasinda sadece bir harf girin!")
+            continue
+        if deneme3=='N' :
+            cevap[0:1] = ['N']
+            cevap[7:] = ['N']
+            print(*cevap)
+        elif deneme3=='S' :
+            cevap[2:3] = ['S']
+            cevap[5:6] = ['S']
+            print(*cevap)
+        elif deneme3=='A' :
+            cevap[1:2] = ['A']
+            print(*cevap)
+        elif deneme3=='I' :
+            cevap[3:4] = ['I']
+            cevap[6:7] = ['I']
+            print(*cevap)
+        elif deneme3=='L':
+            cevap[4:5] = ['L']
+            print(*cevap)
+        else :
+            print("""
+                     ---------                        
+                     |       |
+                     |       0
+                     |      /|\\ 
+                     |
+                     |                                                         
+                     |
+                   -----""")
+            print('{} hakkiniz kaldi!'.format(sayac))
+
+            sayac -= 1
+    if sayac==2 :
+        deneme4 = input('Lutfen bir tahminde bulunun :')
+        deneme4 = deneme4.upper()
+        if deneme4 in sayi:
+            print('Lutfen bir harf girin')
+            continue
+        if deneme4 in karakter :
+            print('Lutfen ozel karakter girmeyin')
+            continue
+        if deneme4 in bosluk :
+            print('Lutfen tahmini bos birakmayin')
+            continue
+        if len(deneme4) > 1:
+            print("Lutfen her defasinda sadece bir harf girin!")
+            continue
+        if deneme4 == 'N':
+            cevap[0:1] = ['N']
+            cevap[7:] = ['N']
+            print(*cevap)
+        elif deneme4 == 'S':
+            cevap[2:3] = ['S']
+            cevap[5:6] = ['S']
+            print(*cevap)
+        elif deneme4 == 'A':
+            cevap[1:2] = ['A']
+            print(*cevap)
+        elif deneme4 == 'I':
+            cevap[3:4] = ['I']
+            cevap[6:7] = ['I']
+            print(*cevap)
+        elif deneme4 == 'L':
+            cevap[4:5] = ['L']
+            print(*cevap)
+        else:
+            print("""
+                     ---------                        
+                     |       |
+                     |       0
+                     |      /|\\
+                     |       |
+                     |                                                         
+                     |
+                   -----""")
+            print('{} hakkiniz kaldi!'.format(sayac))
+            sayac -= 1
+
+    if sayac==1 :
+        deneme5 = input('Lutfen bir tahminde bulunun :')
+        if deneme5 in sayi:
+            print('Lutfen bir harf girin')
+            continue
+        if deneme5 in karakter :
+            print('Lutfen ozel karakter girmeyin')
+            continue
+        if deneme5 in bosluk :
+            print('Lutfen tahmini bos birakmayin')
+            continue
+        if len(deneme5) > 1:
+            print("Lutfen her defasinda sadece bir harf girin!")
+            continue
+        if deneme5 == 'N':
+            cevap[0:1] = ['N']
+            cevap[7:] = ['N']
+            print(*cevap)
+        elif deneme5 == 'S':
+            cevap[2:3] = ['S']
+            cevap[5:6] = ['S']
+            print(*cevap)
+        elif deneme5 == 'A':
+            cevap[1:2] = ['A']
+            print(*cevap)
+        elif deneme5 == 'I':
+            cevap[3:4] = ['I']
+            cevap[6:7] = ['I']
+            print(*cevap)
+        elif deneme5 == 'L':
+            cevap[4:5] = ['L']
+            print(*cevap)
+        else:
+            print("""
+                     ---------                        
+                     |       |
+                     |       0
+                     |      /|\\
+                     |       |
+                     |      /                                                  
+                     |
+                  -----""")
+            print('{} hakkiniz kaldi!'.format(sayac))
+            sayac -= 1
+
+    if sayac==0 :
+        deneme6 = input('Lutfen bir tahminde bulunun')
+        if deneme6 in sayi:
+            print('Lutfen bir harf girin')
+            continue
+        if deneme6 in karakter :
+            print('Lutfen ozel karakter girmeyin')
+            continue
+        if deneme6 in bosluk :
+            print('Lutfen tahmini bos birakmayin')
+            continue
+        if len(deneme6) > 1:
+            print("Lutfen her defasinda sadece bir harf girin!")
+            continue
+        if deneme6 == 'N':
+            cevap[0:1] = ['N']
+            cevap[7:] = ['N']
+            print(*cevap)
+        elif deneme6 == 'S':
+            cevap[2:3] = ['S']
+            cevap[5:6] = ['S']
+            print(*cevap)
+        elif deneme6 == 'A':
+            cevap[1:2] = ['A']
+            print(*cevap)
+        elif deneme6 == 'I':
+            cevap[3:4] = ['I']
+            cevap[6:7] = ['I']
+            print(*cevap)
+        elif deneme6 == 'L':
+            cevap[4:5] = ['L']
+            print(*cevap)
+        else:
+            print("""
+                     ---------                        
+                     |       |
+                     |       0
+                     |      /|\\
+                     |       |
+                     |      / \                                                
+                     |
+                   -----""")
+            print('Malasef bu adami kurtaramadiniz :\( ')
+            quit()
+#kullanici hicbirini bilemedigi zaman en son else devreye giriyor
+#ve kullanici kaybediyor.bir sknti var oda kullanici bir harf bildiginde
+#sonra bilememe durumu olunca veya tersi bi bug oluyor ve input
+#girdigimizde tekrar input istiyor ondan sonra sayac devam ettigi icin
+#dongu bozulmadan devam ediyor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
