@@ -1,0 +1,58 @@
+sayi = '4835'
+sayi = list(sayi)
+
+x = 0
+y = 0
+while True:
+
+    print('4 Haneli bir sayimiz var ve bunu bulmaniz gerekiyor...')
+    tahmin = input('Lutfen bir tahminde bulunun :')
+    tahmin = list(tahmin)
+    if tahmin == sayi:
+        print('Tebrikler bildiniz.')
+        print('+4')
+        break
+    
+    if tahmin[0] == sayi[0]:
+        x += 1
+
+    if tahmin[1] == sayi[1]:
+        x += 1
+
+    if tahmin[2] == sayi[2]:
+        x += 1
+
+    if tahmin[3] == sayi[3]:
+        x += 1
+
+    if '4' in tahmin :
+        if tahmin[0] != sayi[0]:
+            y -= 1
+    if '8' in tahmin:
+        if tahmin[1] != sayi[1]:
+            y -= 1
+    if '3' in tahmin:
+        if tahmin[2] != sayi[2]:
+            y -= 1
+    if '5' in tahmin:
+        if tahmin[3] != sayi[3]:
+            y -= 1
+        print('+', x, sep='')
+        print(y)
+        break
+   
+
+    for i in sayi :
+        if i in tahmin :
+            if tahmin[0] == sayi[0]:
+                x += 1
+
+            if tahmin[1] == sayi[1]:
+                x += 1
+
+            if tahmin[2] == sayi[2]:
+                x += 1
+
+            if tahmin[3] == sayi[3]:
+                x += 1
+#dersten once ekledigim icin aciklama yok tekrar guncellenecek 
